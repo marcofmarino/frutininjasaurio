@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://jbksqg4xj1kw"
+path="res://.godot/imported/scallion01.obj-ef3a7c8ae7da996b596a424d894dc960.mesh"
+
+[deps]
+
+files=["res://.godot/imported/scallion01.obj-ef3a7c8ae7da996b596a424d894dc960.mesh"]
+
+source_file="res://assets/models/fruits/scallion01.obj"
+dest_files=["res://.godot/imported/scallion01.obj-ef3a7c8ae7da996b596a424d894dc960.mesh", "res://.godot/imported/scallion01.obj-ef3a7c8ae7da996b596a424d894dc960.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c5j5xfvo3rnel"
+path="res://.godot/imported/WoodLog.obj-2fe5cf9110f449db7776285a28d9f65b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/WoodLog.obj-2fe5cf9110f449db7776285a28d9f65b.mesh"]
+
+source_file="res://assets/models/trees/WoodLog.obj"
+dest_files=["res://.godot/imported/WoodLog.obj-2fe5cf9110f449db7776285a28d9f65b.mesh", "res://.godot/imported/WoodLog.obj-2fe5cf9110f449db7776285a28d9f65b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://87fm7t5sqngl"
+path="res://.godot/imported/pear02.obj-95793ce0c0ca3116574a9298df71c965.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pear02.obj-95793ce0c0ca3116574a9298df71c965.mesh"]
+
+source_file="res://assets/models/fruits/pear02.obj"
+dest_files=["res://.godot/imported/pear02.obj-95793ce0c0ca3116574a9298df71c965.mesh", "res://.godot/imported/pear02.obj-95793ce0c0ca3116574a9298df71c965.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d0kvok2b0x6wl"
+path="res://.godot/imported/kiwi01.obj-a349328b17ceaedee158ef04ce48d4e2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/kiwi01.obj-a349328b17ceaedee158ef04ce48d4e2.mesh"]
+
+source_file="res://assets/models/fruits/kiwi01.obj"
+dest_files=["res://.godot/imported/kiwi01.obj-a349328b17ceaedee158ef04ce48d4e2.mesh", "res://.godot/imported/kiwi01.obj-a349328b17ceaedee158ef04ce48d4e2.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

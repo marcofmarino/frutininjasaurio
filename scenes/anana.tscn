@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3lcuo5vdcpp1"]
+
+[ext_resource type="ArrayMesh" uid="uid://cqtt4olukly3b" path="res://assets/models/fruits/pineapple01.obj" id="1_564d3"]
+[ext_resource type="Script" path="res://assets/scripts/frutas.gd" id="1_qmwap"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ktdy2"]
+rough = true
+bounce = 0.2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pshnk"]
+size = Vector3(0.13, 0.15, 0.13)
+
+[node name="Anana" type="RigidBody3D"]
+mass = 3.0
+physics_material_override = SubResource("PhysicsMaterial_ktdy2")
+gravity_scale = 1.5
+inertia = Vector3(0.3, 0, 0.3)
+script = ExtResource("1_qmwap")
+
+[node name="Pineapple01" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.59247, 0, 0, 0, 1.59247, 0, 0, 0, 1.59247, 0, 0, 0)
+mesh = ExtResource("1_564d3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.48977, 0, 0, 0, 1.48977, 0, 0, 0, 1.48977, 0, 0, 0)
+shape = SubResource("BoxShape3D_pshnk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

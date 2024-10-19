@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://d08xid74scitg"]
+
+[ext_resource type="Script" path="res://assets/scripts/frutas.gd" id="1_up340"]
+[ext_resource type="ArrayMesh" uid="uid://bfxx0l882mssc" path="res://assets/models/fruits/orange01.obj" id="2_5eyil"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bhfuk"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_yoiv5"]
+radius = 0.0922024
+
+[node name="Naranja" type="RigidBody3D"]
+physics_material_override = SubResource("PhysicsMaterial_bhfuk")
+can_sleep = false
+script = ExtResource("1_up340")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.86655, 0, 0, 0, 1.86655, 0, 0, 0, 1.86655, 0, 0, 0)
+mesh = ExtResource("2_5eyil")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.08647, 0.416518, 0.200557, -0.436156, 1.09335, 0.0920931, -0.153228, -0.158826, 1.15992, 0, 0, 0)
+shape = SubResource("SphereShape3D_yoiv5")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

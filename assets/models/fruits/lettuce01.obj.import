@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c0wto6l4w26ux"
+path="res://.godot/imported/lettuce01.obj-d3dd39b783fe28c9595ec9d7126b3d69.mesh"
+
+[deps]
+
+files=["res://.godot/imported/lettuce01.obj-d3dd39b783fe28c9595ec9d7126b3d69.mesh"]
+
+source_file="res://assets/models/fruits/lettuce01.obj"
+dest_files=["res://.godot/imported/lettuce01.obj-d3dd39b783fe28c9595ec9d7126b3d69.mesh", "res://.godot/imported/lettuce01.obj-d3dd39b783fe28c9595ec9d7126b3d69.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

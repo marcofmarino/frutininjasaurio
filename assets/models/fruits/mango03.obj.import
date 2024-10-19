@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://0ar010k447ol"
+path="res://.godot/imported/mango03.obj-dab7a8d810d084ed7d6551fe877c78a7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/mango03.obj-dab7a8d810d084ed7d6551fe877c78a7.mesh"]
+
+source_file="res://assets/models/fruits/mango03.obj"
+dest_files=["res://.godot/imported/mango03.obj-dab7a8d810d084ed7d6551fe877c78a7.mesh", "res://.godot/imported/mango03.obj-dab7a8d810d084ed7d6551fe877c78a7.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

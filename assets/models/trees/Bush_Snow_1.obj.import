@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dshn812p4ihxq"
+path="res://.godot/imported/Bush_Snow_1.obj-c47bf3ff1c50bdf4f627b602eb463a4f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Bush_Snow_1.obj-c47bf3ff1c50bdf4f627b602eb463a4f.mesh"]
+
+source_file="res://assets/models/trees/Bush_Snow_1.obj"
+dest_files=["res://.godot/imported/Bush_Snow_1.obj-c47bf3ff1c50bdf4f627b602eb463a4f.mesh", "res://.godot/imported/Bush_Snow_1.obj-c47bf3ff1c50bdf4f627b602eb463a4f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

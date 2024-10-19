@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c334omd4dtt4n"
+path="res://.godot/imported/lemon02.obj-a314d2fbdb4ab37d735fb125f4fb6706.mesh"
+
+[deps]
+
+files=["res://.godot/imported/lemon02.obj-a314d2fbdb4ab37d735fb125f4fb6706.mesh"]
+
+source_file="res://assets/models/fruits/lemon02.obj"
+dest_files=["res://.godot/imported/lemon02.obj-a314d2fbdb4ab37d735fb125f4fb6706.mesh", "res://.godot/imported/lemon02.obj-a314d2fbdb4ab37d735fb125f4fb6706.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

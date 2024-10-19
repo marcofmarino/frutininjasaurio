@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d3sbv3swijhcj"
+path="res://.godot/imported/fig01.obj-18c79e7e63977dac727ca4658ef5f3d3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/fig01.obj-18c79e7e63977dac727ca4658ef5f3d3.mesh"]
+
+source_file="res://assets/models/fruits/fig01.obj"
+dest_files=["res://.godot/imported/fig01.obj-18c79e7e63977dac727ca4658ef5f3d3.mesh", "res://.godot/imported/fig01.obj-18c79e7e63977dac727ca4658ef5f3d3.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

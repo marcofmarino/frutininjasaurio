@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://drr6fxo6sehle"
+path="res://.godot/imported/hazelnut02.obj-1b8681aa45d8a33f5338ad3202f8b4b3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/hazelnut02.obj-1b8681aa45d8a33f5338ad3202f8b4b3.mesh"]
+
+source_file="res://assets/models/fruits/hazelnut02.obj"
+dest_files=["res://.godot/imported/hazelnut02.obj-1b8681aa45d8a33f5338ad3202f8b4b3.mesh", "res://.godot/imported/hazelnut02.obj-1b8681aa45d8a33f5338ad3202f8b4b3.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

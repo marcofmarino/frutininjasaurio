@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ca5do75tpexln"
+path="res://.godot/imported/Willow_4.obj-aa1671fea9dc5fd3da3573fb41c5a758.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Willow_4.obj-aa1671fea9dc5fd3da3573fb41c5a758.mesh"]
+
+source_file="res://assets/models/trees/Willow_4.obj"
+dest_files=["res://.godot/imported/Willow_4.obj-aa1671fea9dc5fd3da3573fb41c5a758.mesh", "res://.godot/imported/Willow_4.obj-aa1671fea9dc5fd3da3573fb41c5a758.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

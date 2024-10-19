@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bwhaycvyyjsw1"
+path="res://.godot/imported/asparagus01.obj-c131552067f65633b62adb98f9485653.mesh"
+
+[deps]
+
+files=["res://.godot/imported/asparagus01.obj-c131552067f65633b62adb98f9485653.mesh"]
+
+source_file="res://assets/models/fruits/asparagus01.obj"
+dest_files=["res://.godot/imported/asparagus01.obj-c131552067f65633b62adb98f9485653.mesh", "res://.godot/imported/asparagus01.obj-c131552067f65633b62adb98f9485653.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

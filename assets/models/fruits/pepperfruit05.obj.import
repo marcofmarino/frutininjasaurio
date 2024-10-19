@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://5wj7ufiasgbg"
+path="res://.godot/imported/pepperfruit05.obj-30292d763a0de388cbb29352203baa6f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pepperfruit05.obj-30292d763a0de388cbb29352203baa6f.mesh"]
+
+source_file="res://assets/models/fruits/pepperfruit05.obj"
+dest_files=["res://.godot/imported/pepperfruit05.obj-30292d763a0de388cbb29352203baa6f.mesh", "res://.godot/imported/pepperfruit05.obj-30292d763a0de388cbb29352203baa6f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

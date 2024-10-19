@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://de27enqdtmtmc"
+path="res://.godot/imported/pepperchili03.obj-17968dccfba2281850f6a34df857e7df.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pepperchili03.obj-17968dccfba2281850f6a34df857e7df.mesh"]
+
+source_file="res://assets/models/fruits/pepperchili03.obj"
+dest_files=["res://.godot/imported/pepperchili03.obj-17968dccfba2281850f6a34df857e7df.mesh", "res://.godot/imported/pepperchili03.obj-17968dccfba2281850f6a34df857e7df.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

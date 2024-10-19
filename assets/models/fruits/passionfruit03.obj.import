@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cobpnxpbpkeso"
+path="res://.godot/imported/passionfruit03.obj-2c5773aaaa9c76f227795cb2d9675eda.mesh"
+
+[deps]
+
+files=["res://.godot/imported/passionfruit03.obj-2c5773aaaa9c76f227795cb2d9675eda.mesh"]
+
+source_file="res://assets/models/fruits/passionfruit03.obj"
+dest_files=["res://.godot/imported/passionfruit03.obj-2c5773aaaa9c76f227795cb2d9675eda.mesh", "res://.godot/imported/passionfruit03.obj-2c5773aaaa9c76f227795cb2d9675eda.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

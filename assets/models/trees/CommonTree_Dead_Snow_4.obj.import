@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dmji1m8upbi"
+path="res://.godot/imported/CommonTree_Dead_Snow_4.obj-cea8f44e11b9f0803fc2f4115ca728aa.mesh"
+
+[deps]
+
+files=["res://.godot/imported/CommonTree_Dead_Snow_4.obj-cea8f44e11b9f0803fc2f4115ca728aa.mesh"]
+
+source_file="res://assets/models/trees/CommonTree_Dead_Snow_4.obj"
+dest_files=["res://.godot/imported/CommonTree_Dead_Snow_4.obj-cea8f44e11b9f0803fc2f4115ca728aa.mesh", "res://.godot/imported/CommonTree_Dead_Snow_4.obj-cea8f44e11b9f0803fc2f4115ca728aa.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

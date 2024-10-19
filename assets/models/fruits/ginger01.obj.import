@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://mpkl8h3bednh"
+path="res://.godot/imported/ginger01.obj-3ce8f588952ffcb00d3206368e8482f8.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ginger01.obj-3ce8f588952ffcb00d3206368e8482f8.mesh"]
+
+source_file="res://assets/models/fruits/ginger01.obj"
+dest_files=["res://.godot/imported/ginger01.obj-3ce8f588952ffcb00d3206368e8482f8.mesh", "res://.godot/imported/ginger01.obj-3ce8f588952ffcb00d3206368e8482f8.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

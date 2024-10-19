@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bp824og01twdx"
+path="res://.godot/imported/cucumber03.obj-ef739f6a806fe030c3ce77784f468561.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cucumber03.obj-ef739f6a806fe030c3ce77784f468561.mesh"]
+
+source_file="res://assets/models/fruits/cucumber03.obj"
+dest_files=["res://.godot/imported/cucumber03.obj-ef739f6a806fe030c3ce77784f468561.mesh", "res://.godot/imported/cucumber03.obj-ef739f6a806fe030c3ce77784f468561.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

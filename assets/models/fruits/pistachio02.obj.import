@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cros34sw8inb"
+path="res://.godot/imported/pistachio02.obj-62287d0e12e89a6012c7f4800c047ea7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pistachio02.obj-62287d0e12e89a6012c7f4800c047ea7.mesh"]
+
+source_file="res://assets/models/fruits/pistachio02.obj"
+dest_files=["res://.godot/imported/pistachio02.obj-62287d0e12e89a6012c7f4800c047ea7.mesh", "res://.godot/imported/pistachio02.obj-62287d0e12e89a6012c7f4800c047ea7.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

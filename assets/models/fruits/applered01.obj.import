@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cpao76usbic1u"
+path="res://.godot/imported/applered01.obj-07e9335bf35c77c29aa9cb79108b5355.mesh"
+
+[deps]
+
+files=["res://.godot/imported/applered01.obj-07e9335bf35c77c29aa9cb79108b5355.mesh"]
+
+source_file="res://assets/models/fruits/applered01.obj"
+dest_files=["res://.godot/imported/applered01.obj-07e9335bf35c77c29aa9cb79108b5355.mesh", "res://.godot/imported/applered01.obj-07e9335bf35c77c29aa9cb79108b5355.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

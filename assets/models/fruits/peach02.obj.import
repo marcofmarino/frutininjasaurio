@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://biwfdyt6anguu"
+path="res://.godot/imported/peach02.obj-1897e8510f0b352c2854b7cbca8950f1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/peach02.obj-1897e8510f0b352c2854b7cbca8950f1.mesh"]
+
+source_file="res://assets/models/fruits/peach02.obj"
+dest_files=["res://.godot/imported/peach02.obj-1897e8510f0b352c2854b7cbca8950f1.mesh", "res://.godot/imported/peach02.obj-1897e8510f0b352c2854b7cbca8950f1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dnswtqs8euo7o"
+path="res://.godot/imported/papaya01.obj-6ce35728aa4e9b22345ec2f126ec0182.mesh"
+
+[deps]
+
+files=["res://.godot/imported/papaya01.obj-6ce35728aa4e9b22345ec2f126ec0182.mesh"]
+
+source_file="res://assets/models/fruits/papaya01.obj"
+dest_files=["res://.godot/imported/papaya01.obj-6ce35728aa4e9b22345ec2f126ec0182.mesh", "res://.godot/imported/papaya01.obj-6ce35728aa4e9b22345ec2f126ec0182.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

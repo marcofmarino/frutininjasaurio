@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dpmo8frl0o6ja"
+path="res://.godot/imported/pomegranate03.obj-5be45353e3f4cbfb19d5521d3dff5e61.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pomegranate03.obj-5be45353e3f4cbfb19d5521d3dff5e61.mesh"]
+
+source_file="res://assets/models/fruits/pomegranate03.obj"
+dest_files=["res://.godot/imported/pomegranate03.obj-5be45353e3f4cbfb19d5521d3dff5e61.mesh", "res://.godot/imported/pomegranate03.obj-5be45353e3f4cbfb19d5521d3dff5e61.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

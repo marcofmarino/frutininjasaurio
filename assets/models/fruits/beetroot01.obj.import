@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cpn8tbfxbunxt"
+path="res://.godot/imported/beetroot01.obj-07a7d0772597a4f532168b33cfc2e91a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/beetroot01.obj-07a7d0772597a4f532168b33cfc2e91a.mesh"]
+
+source_file="res://assets/models/fruits/beetroot01.obj"
+dest_files=["res://.godot/imported/beetroot01.obj-07a7d0772597a4f532168b33cfc2e91a.mesh", "res://.godot/imported/beetroot01.obj-07a7d0772597a4f532168b33cfc2e91a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

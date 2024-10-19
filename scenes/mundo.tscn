@@ -1,0 +1,241 @@
+[gd_scene load_steps=24 format=3 uid="uid://dxql1afxjxtjb"]
+
+[ext_resource type="Script" path="res://assets/scripts/camera_right.gd" id="1_u4t6x"]
+[ext_resource type="Script" path="res://assets/scripts/mundo.gd" id="1_xmh0s"]
+[ext_resource type="Script" path="res://addons/godOSC/scripts/OSCServer.gd" id="2_2hni8"]
+[ext_resource type="Script" path="res://assets/scripts/control.gd" id="2_5cwos"]
+[ext_resource type="Texture2D" uid="uid://c5ae7cqm1pjow" path="res://assets/sprites/trelew.jpg" id="3_8gsmy"]
+[ext_resource type="Script" path="res://addons/godOSC/scripts/OSCReceiver.gd" id="4_mlqwg"]
+[ext_resource type="ArrayMesh" uid="uid://dkjp5f8jqkmcd" path="res://assets/models/trees/PineTree_4.obj" id="5_8wtrp"]
+[ext_resource type="Script" path="res://assets/scripts/spawn_frutas_1.gd" id="6_sg1yb"]
+[ext_resource type="AudioStream" uid="uid://wtdsdcjcsti3" path="res://assets/sound_fx/ambience_sound.ogg" id="8_c32hj"]
+[ext_resource type="ArrayMesh" uid="uid://c3ldgenuhjdj0" path="res://assets/models/trees/Bush_1.obj" id="8_skgps"]
+[ext_resource type="ArrayMesh" uid="uid://coyaf7x6v7bt4" path="res://assets/models/trees/Bush_2.obj" id="9_bax2p"]
+[ext_resource type="ArrayMesh" uid="uid://d0lvwcddnbmrv" path="res://assets/models/trees/Grass.obj" id="10_mfurk"]
+[ext_resource type="ArrayMesh" uid="uid://dfuodpnuo2805" path="res://assets/models/trees/PalmTree_1.obj" id="11_tih2v"]
+[ext_resource type="ArrayMesh" uid="uid://1tnsbxgp61u7" path="res://assets/models/trees/PineTree_5.obj" id="12_g8itd"]
+[ext_resource type="ArrayMesh" uid="uid://c4h3exfv75i31" path="res://assets/models/trees/PineTree_3.obj" id="14_ah2tv"]
+[ext_resource type="ArrayMesh" uid="uid://2bj5khyi67h8" path="res://assets/models/trees/Plant_3.obj" id="15_pvw6x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c18vt"]
+albedo_color = Color(0.0124506, 0.0955881, 0.061499, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_2jg0x"]
+material = SubResource("StandardMaterial3D_c18vt")
+size = Vector2(10, 10)
+orientation = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bqq7o"]
+size = Vector3(9.54108, 0.514893, 9.13971)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cghnk"]
+size = Vector3(11.9042, 0.788208, 6.5874)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j0sii"]
+sky_top_color = Color(0.731094, 0.294414, 0.32016, 1)
+sky_horizon_color = Color(0.680535, 0.651929, 0.600389, 1)
+sky_curve = 0.227358
+
+[sub_resource type="Sky" id="Sky_yu83k"]
+sky_material = SubResource("ProceduralSkyMaterial_j0sii")
+
+[sub_resource type="Environment" id="Environment_4fkr7"]
+background_mode = 2
+background_color = Color(0.991164, 0.991164, 0.991164, 1)
+background_energy_multiplier = 2.01
+sky = SubResource("Sky_yu83k")
+sky_custom_fov = 92.8
+ambient_light_source = 2
+ambient_light_color = Color(0.831133, 0.701114, 0.467946, 1)
+ambient_light_energy = 9.9
+
+[node name="Mundo" type="Node3D"]
+script = ExtResource("1_xmh0s")
+
+[node name="OSCServer" type="Node" parent="."]
+script = ExtResource("2_2hni8")
+port = 9000
+
+[node name="Sol" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.508636, -0.624906, 0.592268, 3.32294e-09, 0.687899, 0.725807, -0.860982, -0.369171, 0.34989, 2.64574, 4.2731, 2.64278)
+light_color = Color(0.984314, 0.913725, 0.490196, 1)
+light_energy = 4.879
+shadow_enabled = true
+sky_mode = 1
+
+[node name="SpawnFrutas1" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.21868, 1.16087, -1.81002)
+script = ExtResource("6_sg1yb")
+
+[node name="Timer" type="Timer" parent="SpawnFrutas1"]
+autostart = true
+
+[node name="Jugador" type="Node3D" parent="."]
+
+[node name="OSCReceiver" type="Node" parent="Jugador" node_paths=PackedStringArray("target_server")]
+script = ExtResource("4_mlqwg")
+target_server = NodePath("../../OSCServer")
+osc_address = "/test"
+
+[node name="PineTree4" type="MeshInstance3D" parent="Jugador"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.36672, 0.00582385, -3.21488)
+mesh = ExtResource("5_8wtrp")
+
+[node name="Camaras" type="Node3D" parent="."]
+script = ExtResource("1_u4t6x")
+
+[node name="Control" type="Control" parent="Camaras"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -9.0
+offset_right = 20.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_5cwos")
+
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="Camaras/Control"]
+layout_direction = 3
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 117.0
+offset_top = 43.0
+offset_right = 1178.0
+offset_bottom = -41.0
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 3
+stretch = true
+
+[node name="ViewportRight" type="SubViewport" parent="Camaras/Control/SubViewportContainer2"]
+handle_input_locally = false
+audio_listener_enable_2d = true
+audio_listener_enable_3d = true
+size = Vector2i(1061, 996)
+render_target_update_mode = 4
+
+[node name="CameraRight" type="Camera3D" parent="Camaras/Control/SubViewportContainer2/ViewportRight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02, 1.79, 1.052)
+size = 0.1
+far = 4006.35
+script = ExtResource("1_u4t6x")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Camaras/Control"]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 136.0
+offset_top = 37.0
+offset_right = 1221.0
+offset_bottom = -41.0
+grow_vertical = 2
+size_flags_horizontal = 0
+stretch = true
+
+[node name="ViewportLeft" type="SubViewport" parent="Camaras/Control/SubViewportContainer"]
+handle_input_locally = false
+audio_listener_enable_2d = true
+audio_listener_enable_3d = true
+size = Vector2i(1085, 1002)
+render_target_update_mode = 4
+
+[node name="CameraLeft" type="Camera3D" parent="Camaras/Control/SubViewportContainer/ViewportLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02, 1.79, 1.052)
+size = 0.1
+script = ExtResource("1_u4t6x")
+
+[node name="Piso" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Piso"]
+mesh = SubResource("QuadMesh_2jg0x")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Piso"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.212982, -0.248514, -0.103912)
+shape = SubResource("BoxShape3D_bqq7o")
+
+[node name="Piso2" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Piso2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.84906, -0.105896, -2.7937)
+shape = SubResource("BoxShape3D_cghnk")
+
+[node name="Ambiente" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0484689, 1.76364, 1.46454)
+stream = ExtResource("8_c32hj")
+volume_db = 0.07
+autoplay = true
+max_distance = 19.85
+
+[node name="Mundo" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_4fkr7")
+
+[node name="Entorno" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.38419e-07, 0)
+
+[node name="Bush1" type="MeshInstance3D" parent="Entorno"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.28804, -0.0827855, -3.60921)
+mesh = ExtResource("8_skgps")
+skeleton = NodePath("../..")
+
+[node name="Bush2" type="MeshInstance3D" parent="Entorno"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.10356, -0.0769768, -3.10183)
+mesh = ExtResource("9_bax2p")
+skeleton = NodePath("../..")
+
+[node name="Grass" type="MeshInstance3D" parent="Entorno"]
+transform = Transform3D(1.85213, 0, 0, 0, 1.85213, 0, 0, 0, 1, -5.85087, -1.35223, -1.83692)
+mesh = ExtResource("10_mfurk")
+skeleton = NodePath("../..")
+
+[node name="PalmTree1" type="MeshInstance3D" parent="Entorno"]
+transform = Transform3D(1.85213, 0, 0, 0, 1.85213, 0, 0, 0, 1, -5.31757, -1.37064, -3.09142)
+mesh = ExtResource("11_tih2v")
+skeleton = NodePath("../..")
+
+[node name="PineTree5" type="MeshInstance3D" parent="Entorno"]
+transform = Transform3D(1.85213, 0, 0, 0, 1.85213, 0, 0, 0, 1, 4.92255, -0.0458636, -2.58795)
+mesh = ExtResource("12_g8itd")
+skeleton = NodePath("../..")
+
+[node name="PineTree3" type="MeshInstance3D" parent="Entorno"]
+transform = Transform3D(1.82089, 0, 0, 0, 1.82089, 0, 0, 0, 1.53826, 5.55197, -0.125981, -1.87675)
+mesh = ExtResource("14_ah2tv")
+
+[node name="PineTree4" type="MeshInstance3D" parent="Entorno"]
+transform = Transform3D(1.85213, 0, 0, 0, 1.85213, 0, 0, 0, 1, -4.36806, -0.125981, -2.60569)
+mesh = ExtResource("14_ah2tv")
+
+[node name="PineTree6" type="MeshInstance3D" parent="Entorno"]
+transform = Transform3D(-0.274245, 0, 1.06604, 0, 1.85213, 0, -0.251784, 0, -1.16114, -1.84351, -0.208985, -4.32139)
+mesh = ExtResource("14_ah2tv")
+
+[node name="PineTree7" type="MeshInstance3D" parent="Entorno"]
+transform = Transform3D(0.825764, 0, -0.243382, 0, 1.85213, 0, 1.22406, 0, 0.164188, 1.83293, -0.111455, -4.16018)
+mesh = ExtResource("14_ah2tv")
+
+[node name="Plant3" type="MeshInstance3D" parent="Entorno"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.68933, -0.156087, -0.0203836)
+mesh = ExtResource("15_pvw6x")
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(0.848953, 0, 5.43184, 0, 5.49779, 0, -5.43184, 0, 0.848953, -4.56168, 9.14104, -11.1819)
+visible = false
+texture = ExtResource("3_8gsmy")
+
+[node name="Sprite3D3" type="Sprite3D" parent="."]
+transform = Transform3D(0.848953, 0, 5.43184, 0, 5.49779, 0, -5.43184, 0, 0.848953, 7.99583, 9.14104, -11.1819)
+visible = false
+texture = ExtResource("3_8gsmy")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(5.49779, 0, 0, 0, 5.49779, 0, 0, 0, 5.49779, 1.5798, 9.14104, -11.1819)
+texture = ExtResource("3_8gsmy")
+
+[connection signal="timeout" from="SpawnFrutas1/Timer" to="SpawnFrutas1" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Piso2" to="Camaras" method="_on_area_3d_body_entered"]

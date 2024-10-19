@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://k1bi1br4ru4d"
+path="res://.godot/imported/leek03.obj-e4873901a9ead7725d45d2e9bf9d994c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/leek03.obj-e4873901a9ead7725d45d2e9bf9d994c.mesh"]
+
+source_file="res://assets/models/fruits/leek03.obj"
+dest_files=["res://.godot/imported/leek03.obj-e4873901a9ead7725d45d2e9bf9d994c.mesh", "res://.godot/imported/leek03.obj-e4873901a9ead7725d45d2e9bf9d994c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ctd2laef4plh2"
+path="res://.godot/imported/Willow_Dead_Snow_1.obj-5752e16b2fbe1c7ac211c7ca7e33c2ac.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Willow_Dead_Snow_1.obj-5752e16b2fbe1c7ac211c7ca7e33c2ac.mesh"]
+
+source_file="res://assets/models/trees/Willow_Dead_Snow_1.obj"
+dest_files=["res://.godot/imported/Willow_Dead_Snow_1.obj-5752e16b2fbe1c7ac211c7ca7e33c2ac.mesh", "res://.godot/imported/Willow_Dead_Snow_1.obj-5752e16b2fbe1c7ac211c7ca7e33c2ac.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

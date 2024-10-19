@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://de2lh7v8sj22c"
+path="res://.godot/imported/garlic01.obj-2b7c1170d42b35f58deec0a01602619d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/garlic01.obj-2b7c1170d42b35f58deec0a01602619d.mesh"]
+
+source_file="res://assets/models/fruits/garlic01.obj"
+dest_files=["res://.godot/imported/garlic01.obj-2b7c1170d42b35f58deec0a01602619d.mesh", "res://.godot/imported/garlic01.obj-2b7c1170d42b35f58deec0a01602619d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

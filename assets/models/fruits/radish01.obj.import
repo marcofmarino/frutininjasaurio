@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dmqo3v2b87ef7"
+path="res://.godot/imported/radish01.obj-943aa65cb33bfc1926f70461de57da52.mesh"
+
+[deps]
+
+files=["res://.godot/imported/radish01.obj-943aa65cb33bfc1926f70461de57da52.mesh"]
+
+source_file="res://assets/models/fruits/radish01.obj"
+dest_files=["res://.godot/imported/radish01.obj-943aa65cb33bfc1926f70461de57da52.mesh", "res://.godot/imported/radish01.obj-943aa65cb33bfc1926f70461de57da52.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

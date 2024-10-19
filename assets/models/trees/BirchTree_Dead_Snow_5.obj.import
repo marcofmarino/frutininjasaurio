@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://tjm50phv4j16"
+path="res://.godot/imported/BirchTree_Dead_Snow_5.obj-ede1f2bf7a83b44ee9e1e65762fcd9a6.mesh"
+
+[deps]
+
+files=["res://.godot/imported/BirchTree_Dead_Snow_5.obj-ede1f2bf7a83b44ee9e1e65762fcd9a6.mesh"]
+
+source_file="res://assets/models/trees/BirchTree_Dead_Snow_5.obj"
+dest_files=["res://.godot/imported/BirchTree_Dead_Snow_5.obj-ede1f2bf7a83b44ee9e1e65762fcd9a6.mesh", "res://.godot/imported/BirchTree_Dead_Snow_5.obj-ede1f2bf7a83b44ee9e1e65762fcd9a6.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
