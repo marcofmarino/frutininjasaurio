@@ -2,10 +2,12 @@ extends Marker3D
 
 @export var naranja = preload("res://scenes/naranja.tscn")
 @export var anana = preload("res://scenes/anana.tscn")
+@export var banana = preload("res://scenes/BananaCompleta.tscn")
+
 var array_frutas : Array
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	array_frutas = [naranja, anana]
+	array_frutas = [naranja, anana, banana]
 	#array_frutas.append(naranja)
 	#array_frutas.append(anana)
 

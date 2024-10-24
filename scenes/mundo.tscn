@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dxql1afxjxtjb"]
+[gd_scene load_steps=25 format=3 uid="uid://dxql1afxjxtjb"]
 
 [ext_resource type="Script" path="res://assets/scripts/camera_right.gd" id="1_u4t6x"]
 [ext_resource type="Script" path="res://assets/scripts/mundo.gd" id="1_xmh0s"]
@@ -16,6 +16,7 @@
 [ext_resource type="ArrayMesh" uid="uid://1tnsbxgp61u7" path="res://assets/models/trees/PineTree_5.obj" id="12_g8itd"]
 [ext_resource type="ArrayMesh" uid="uid://c4h3exfv75i31" path="res://assets/models/trees/PineTree_3.obj" id="14_ah2tv"]
 [ext_resource type="ArrayMesh" uid="uid://2bj5khyi67h8" path="res://assets/models/trees/Plant_3.obj" id="15_pvw6x"]
+[ext_resource type="PackedScene" uid="uid://b334xex2kj10v" path="res://scenes/zona_de_corte_frutal_pruebafinal.tscn" id="17_fohhr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c18vt"]
 albedo_color = Color(0.0124506, 0.0955881, 0.061499, 1)
@@ -236,6 +237,10 @@ texture = ExtResource("3_8gsmy")
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(5.49779, 0, 0, 0, 5.49779, 0, 0, 0, 5.49779, 1.5798, 9.14104, -11.1819)
 texture = ExtResource("3_8gsmy")
+
+[node name="Zona de corte frutal" parent="." instance=ExtResource("17_fohhr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.17271, 1.69945, -1.30101)
+script = null
 
 [connection signal="timeout" from="SpawnFrutas1/Timer" to="SpawnFrutas1" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Piso2" to="Camaras" method="_on_area_3d_body_entered"]

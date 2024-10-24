@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b334xex2kj10v"]
+
+[ext_resource type="Script" path="res://assets/scripts/zona_de_corte_frutal_pruebafinal.gd" id="1_pgvu5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m1u6b"]
+
+[node name="Zona de corte frutal" type="Area3D"]
+script = ExtResource("1_pgvu5")
+
+[node name="Colisión" type="CollisionShape3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("BoxShape3D_m1u6b")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
