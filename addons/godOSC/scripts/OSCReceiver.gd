@@ -7,7 +7,7 @@ extends Node
 
 ## The OSCServer to receive messages from
 @export var target_server : OSCServer
-
+@export var label : Label
 ## The OSC address to receive
 @export var osc_address := "/example"
 
@@ -39,8 +39,8 @@ extends Node
 	#pass
 func _physics_process(delta):
 	if target_server.incoming_messages.has(osc_address):
-		pass
-		#var fuerzaBrazoIzq = Vector3(round(target_server.incoming_messages[osc_address][0]), -round(target_server.incoming_messages[osc_address][1]), 0)
-		#$BrazoIzq.apply_force(fuerzaBrazoIzq.normalized(), $BrazoIzq/Marker3D.position)
-		#var fuerzaBrazoDer = Vector3(round(target_server.incoming_messages[osc_address][2]), -round(target_server.incoming_messages[osc_address][3]), 0)
-		#$BrazoDer.apply_force(fuerzaBrazoDer.normalized(), $BrazoIzq/Marker3D.position)
+		if  target_server.incoming_messages[osc_address].size() > 0:
+			if target_server.incoming_messages[osc_address][0] < -0.7 or target_server.incoming_messages[osc_address][0] > 0.7:
+				get_parent().get_parent().cortar_el_banano(GLOBAL.entered_body)
+
+		target_server.incoming_messages.clear()

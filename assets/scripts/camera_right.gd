@@ -9,6 +9,7 @@ var initial_yaw : float = 0.0
 var k : float = 0.98
 
 func _ready():
+
 	await get_tree().process_frame
 	var magnet: Vector3 = Input.get_magnetometer()
 	initial_yaw = atan2(-magnet.x, magnet.z) 
