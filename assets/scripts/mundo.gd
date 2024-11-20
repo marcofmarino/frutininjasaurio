@@ -6,6 +6,8 @@ var calabaza_cortada = preload("res://scenes/calabaza_cortada.tscn")
 var fruta_dragon_cortada = preload("res://scenes/fruta_dragon_cortada.tscn")
 var limon_cortado = preload("res://scenes/limon_cortado.tscn")
 var manzana_cortada = preload("res://scenes/manzana_cortada.tscn")
+var sandia_cortada= preload("res://scenes/sandia_cortada.tscn")
+var pera_cortada= preload("res://scenes/pera_cortada.tscn")
 var huevo_cortado = preload("res://scenes/HuevoCortadoN.tscn")
 #var bananacut_scene = preload("res://scenes/banana_cortada.tscn")
 
@@ -37,6 +39,10 @@ func cortar_el_banano(body: RigidBody3D) -> void:
 				banana_instance = limon_cortado.instantiate()
 			"manzana":
 				banana_instance = manzana_cortada.instantiate()
+			"sandia":
+				banana_instance = sandia_cortada.instantiate()
+			"pera":
+				banana_instance = pera_cortada.instantiate()
 			"huevo":
 				banana_instance = huevo_cortado.instantiate()
 				GLOBAL.vidas -= 1

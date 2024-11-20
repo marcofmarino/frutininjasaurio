@@ -5,6 +5,8 @@ var calabaza = preload("res://scenes/frutas_completas/calabaza_completa.tscn")
 var fruta_dragon = preload("res://scenes/frutas_completas/fruta_dragon_completa.tscn")
 var limon = preload("res://scenes/frutas_completas/limon_completo.tscn")
 var manzana = preload("res://scenes/frutas_completas/manzana_completa.tscn")
+var sandia = preload("res://scenes/sandia_completa.tscn")
+var pera = preload("res://scenes/pera_completa.tscn")
 var huevo = preload("res://scenes/HuevoCompletoN.tscn")
 var array_frutas : Array
 
@@ -17,6 +19,8 @@ func _ready():
 	array_frutas.append(fruta_dragon)
 	array_frutas.append(limon)
 	array_frutas.append(manzana)
+	array_frutas.append(sandia)
+	array_frutas.append(pera)
 	array_frutas.append(huevo)
 
 
