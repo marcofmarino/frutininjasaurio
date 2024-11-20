@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dxql1afxjxtjb"]
+[gd_scene load_steps=37 format=3 uid="uid://dxql1afxjxtjb"]
 
 [ext_resource type="Script" path="res://assets/scripts/camera_right.gd" id="1_u4t6x"]
 [ext_resource type="Script" path="res://assets/scripts/mundo.gd" id="1_xmh0s"]
@@ -18,8 +18,11 @@
 [ext_resource type="ArrayMesh" uid="uid://1tnsbxgp61u7" path="res://assets/models/trees/PineTree_5.obj" id="12_g8itd"]
 [ext_resource type="ArrayMesh" uid="uid://c4h3exfv75i31" path="res://assets/models/trees/PineTree_3.obj" id="14_ah2tv"]
 [ext_resource type="ArrayMesh" uid="uid://2bj5khyi67h8" path="res://assets/models/trees/Plant_3.obj" id="15_pvw6x"]
-[ext_resource type="PackedScene" path="res://scenes/VolcanDeco.tscn" id="19_7sm1g"]
-[ext_resource type="PackedScene" path="res://scenes/HongoRojoDeco.tscn" id="20_1leal"]
+[ext_resource type="PackedScene" uid="uid://dodcikjivvbqs" path="res://scenes/HelechoPrehistorico.tscn" id="17_r06vs"]
+[ext_resource type="PackedScene" uid="uid://bt260mkawllt0" path="res://scenes/VolcanDeco.tscn" id="19_7sm1g"]
+[ext_resource type="Texture2D" uid="uid://y4tv25k38j3c" path="res://scenes/Captura_de_pantalla_2024-11-07_005722-removebg-preview (1).png" id="19_expqq"]
+[ext_resource type="PackedScene" uid="uid://yyqn8ks73ey2" path="res://scenes/HongoRojoDeco.tscn" id="20_1leal"]
+[ext_resource type="PackedScene" uid="uid://b6pkjodgqs4p1" path="res://scenes/HongoVerde.tscn" id="21_ni3kd"]
 
 [sub_resource type="Animation" id="Animation_mqbyf"]
 length = 0.001
@@ -222,7 +225,6 @@ sky = SubResource("Sky_yu83k")
 sky_custom_fov = 92.8
 ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
-fog_enabled = true
 fog_light_color = Color(0.726598, 0.672766, 0.67545, 1)
 
 [node name="Mundo" type="Node3D"]
@@ -436,7 +438,11 @@ transform = Transform3D(-0.274245, 0, 1.06604, 0, 1.85213, 0, -0.251784, 0, -1.1
 mesh = ExtResource("14_ah2tv")
 
 [node name="PineTree8" type="MeshInstance3D" parent="Entorno"]
-transform = Transform3D(-0.274245, 0, 1.06604, 0, 1.85213, 0, -0.251784, 0, -1.16114, -1.84351, -0.208985, -16.0108)
+transform = Transform3D(-0.0662966, 0, 0.257669, 0, 0.448, 0, -0.0608668, 0, -0.280655, -1.84351, -0.487642, -16.0108)
+mesh = ExtResource("14_ah2tv")
+
+[node name="PineTree9" type="MeshInstance3D" parent="Entorno"]
+transform = Transform3D(0.0138836, 0, 0.376439, 0, 0.448, 0, -0.0889227, 0, 0.0587738, 2.20454, -0.487642, -16.0108)
 mesh = ExtResource("14_ah2tv")
 
 [node name="PineTree7" type="MeshInstance3D" parent="Entorno"]
@@ -446,6 +452,15 @@ mesh = ExtResource("14_ah2tv")
 [node name="Plant3" type="MeshInstance3D" parent="Entorno"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.31385, -0.156087, -2.99113)
 mesh = ExtResource("15_pvw6x")
+
+[node name="HelechoPrehistorico" parent="Entorno" instance=ExtResource("17_r06vs")]
+transform = Transform3D(0.999, 0, 0, 0, 0.999, 0, 0, 0, 0.994, -1.10938, -0.142085, -3.84967)
+
+[node name="HelechoPrehistorico2" parent="Entorno" instance=ExtResource("17_r06vs")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 1.99, 0.0994035, -0.275423, -5.20303)
+
+[node name="HelechoPrehistorico3" parent="Entorno" instance=ExtResource("17_r06vs")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 2.985, 3.96132, 0.0400326, -5.20303)
 
 [node name="Sprite3D2" type="Sprite3D" parent="."]
 transform = Transform3D(0.848953, 0, 5.43184, 0, 5.49779, 0, -5.43184, 0, 0.848953, -4.56168, 9.14104, -11.1819)
@@ -481,10 +496,23 @@ direccion = [-1, 5, 0]
 [node name="VolcanDecoBG" parent="." instance=ExtResource("19_7sm1g")]
 transform = Transform3D(4.07254, -1.92606, 1.15128, 2.24388, 3.50869, -2.06757, -0.0123127, 2.36646, 4.00255, 12.3676, 1.83866, -12.7397)
 
+[node name="VolcanDecoBG3" parent="." instance=ExtResource("19_7sm1g")]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0.131998, 0.395424, -17.4042)
+
 [node name="VolcanDecoBG2" parent="." instance=ExtResource("19_7sm1g")]
 transform = Transform3D(1.51823, -0.358498, -2.98967, -2.85326, -1.24103, -1.30015, -0.962035, 3.11496, -0.862068, -16.0096, 1.19984, -13.8671)
 
 [node name="HongoDeco" parent="." instance=ExtResource("20_1leal")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.76268, -0.108135, -2.93545)
+
+[node name="HongoVerde" parent="." instance=ExtResource("21_ni3kd")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 1.01401, -0.0109469, -2.55999)
+
+[node name="HongoVerde2" parent="." instance=ExtResource("21_ni3kd")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -4.89384, -0.0109469, -2.55999)
+
+[node name="Sprite3D4" type="Sprite3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.56461, 2.96273, -15.7464)
+texture = ExtResource("19_expqq")
 
 [connection signal="body_entered" from="Piso2" to="Camaras" method="_on_area_3d_body_entered"]
