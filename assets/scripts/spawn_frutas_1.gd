@@ -9,9 +9,11 @@ var huevo = preload("res://scenes/HuevoCompletoN.tscn")
 var array_frutas : Array
 
 @export var direccion: Array = [0, 0, 0]
+@export var tiempo_inicio: float = 1.0
 # Called when the node enters the scene tree for the first time.
 
 func _ready():
+	$Timer.wait_time = tiempo_inicio
 	array_frutas.append(banana)
 	array_frutas.append(calabaza)
 	array_frutas.append(fruta_dragon)
@@ -23,10 +25,13 @@ func _ready():
 func _on_timer_timeout():
 	randomize()
 	$Timer.wait_time = randf_range(1.5, 3.0)
-
+	$AudioStreamPlayer3D.play()
 	var nueva_fruta = array_frutas.pick_random().instantiate()
 	nueva_fruta.direccion = direccion
 	add_child(nueva_fruta)
-	#var nueva_naranja = naranja.instantiate()
-	#add_child(nueva_naranja)
-	#nueva_naranja.body_entered.connect(nueva_naranja._on_body_entered.bind())
+
+func empezar():
+	$Timer.start()
+
+func parar():
+	$Timer.stop()

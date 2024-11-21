@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dxql1afxjxtjb"]
+[gd_scene load_steps=43 format=3 uid="uid://dxql1afxjxtjb"]
 
 [ext_resource type="Script" path="res://assets/scripts/camera_right.gd" id="1_u4t6x"]
 [ext_resource type="Script" path="res://assets/scripts/mundo.gd" id="1_xmh0s"]
@@ -13,13 +13,22 @@
 [ext_resource type="PackedScene" uid="uid://b8bwei8efbh5t" path="res://assets/models/garras_ter.glb" id="8_ghc2q"]
 [ext_resource type="ArrayMesh" uid="uid://c3ldgenuhjdj0" path="res://assets/models/trees/Bush_1.obj" id="8_skgps"]
 [ext_resource type="ArrayMesh" uid="uid://coyaf7x6v7bt4" path="res://assets/models/trees/Bush_2.obj" id="9_bax2p"]
+[ext_resource type="AudioStream" uid="uid://dj7kwkoiksoc0" path="res://assets/sound_fx/slash_1.mp3" id="9_ufxkc"]
 [ext_resource type="ArrayMesh" uid="uid://d0lvwcddnbmrv" path="res://assets/models/trees/Grass.obj" id="10_mfurk"]
+[ext_resource type="AudioStream" uid="uid://fx1nvn8g520p" path="res://assets/sound_fx/slash_3.mp3" id="10_xtxae"]
 [ext_resource type="ArrayMesh" uid="uid://dfuodpnuo2805" path="res://assets/models/trees/PalmTree_1.obj" id="11_tih2v"]
 [ext_resource type="ArrayMesh" uid="uid://1tnsbxgp61u7" path="res://assets/models/trees/PineTree_5.obj" id="12_g8itd"]
 [ext_resource type="ArrayMesh" uid="uid://c4h3exfv75i31" path="res://assets/models/trees/PineTree_3.obj" id="14_ah2tv"]
 [ext_resource type="ArrayMesh" uid="uid://2bj5khyi67h8" path="res://assets/models/trees/Plant_3.obj" id="15_pvw6x"]
-[ext_resource type="PackedScene" path="res://scenes/VolcanDeco.tscn" id="19_7sm1g"]
-[ext_resource type="PackedScene" path="res://scenes/HongoRojoDeco.tscn" id="20_1leal"]
+[ext_resource type="PackedScene" uid="uid://dodcikjivvbqs" path="res://scenes/HelechoPrehistorico.tscn" id="17_r06vs"]
+[ext_resource type="PackedScene" uid="uid://bt260mkawllt0" path="res://scenes/VolcanDeco.tscn" id="19_7sm1g"]
+[ext_resource type="Texture2D" uid="uid://y4tv25k38j3c" path="res://scenes/Captura_de_pantalla_2024-11-07_005722-removebg-preview (1).png" id="19_expqq"]
+[ext_resource type="PackedScene" uid="uid://yyqn8ks73ey2" path="res://scenes/HongoRojoDeco.tscn" id="20_1leal"]
+[ext_resource type="PackedScene" uid="uid://b6pkjodgqs4p1" path="res://scenes/HongoVerde.tscn" id="21_ni3kd"]
+[ext_resource type="AudioStream" uid="uid://dw1v5c6tpugsc" path="res://assets/sound_fx/swing_1.mp3" id="22_g8636"]
+[ext_resource type="AudioStream" uid="uid://cxiqveeeelylo" path="res://assets/sound_fx/swing_2.mp3" id="23_7156g"]
+[ext_resource type="AudioStream" uid="uid://dpyyr3n0ku8ye" path="res://assets/sound_fx/asiansound_2.mp3" id="28_ak3dr"]
+[ext_resource type="AudioStream" uid="uid://rqq13oi5rth2" path="res://assets/sound_fx/asiansound_4.mp3" id="28_i5ggf"]
 
 [sub_resource type="Animation" id="Animation_mqbyf"]
 length = 0.001
@@ -58,6 +67,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector3(0.0116607, 0.0116607, 0.0116607)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer3D:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_x16hs"]
@@ -98,6 +119,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector3(0.0116607, 0.0116607, 0.0116607), Vector3(0.077, 0.077, 0.077), Vector3(0.077, 0.077, 0.077), Vector3(0.0116607, 0.0116607, 0.0116607)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer3D:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.166667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j8fsv"]
@@ -144,6 +177,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [Vector3(0.0119015, 0.0119015, 0.0119015)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer3D:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_m3gr6"]
 resource_name = "corte_izq"
@@ -184,6 +229,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [Vector3(0.0119015, 0.0119015, 0.0119015), Vector3(0.077, 0.077, 0.077), Vector3(0.0119015, 0.0119015, 0.0119015)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer3D:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.233333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_x8y0u"]
 _data = {
@@ -222,7 +279,6 @@ sky = SubResource("Sky_yu83k")
 sky_custom_fov = 92.8
 ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
-fog_enabled = true
 fog_light_color = Color(0.726598, 0.672766, 0.67545, 1)
 
 [node name="Mundo" type="Node3D"]
@@ -230,7 +286,7 @@ script = ExtResource("1_xmh0s")
 
 [node name="OSCServer" type="Node" parent="."]
 script = ExtResource("2_2hni8")
-port = 7000
+port = 12345
 
 [node name="Sol" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.508636, -0.624906, 0.592268, 3.32294e-09, 0.687899, 0.725807, -0.860982, -0.369171, 0.34989, 2.64574, 4.2731, 2.64278)
@@ -241,11 +297,10 @@ sky_mode = 1
 
 [node name="Jugador" type="Node3D" parent="."]
 
-[node name="OSCReceiver" type="Node" parent="Jugador" node_paths=PackedStringArray("target_server", "label")]
+[node name="OSCReceiver" type="Node" parent="Jugador" node_paths=PackedStringArray("target_server")]
 script = ExtResource("4_mlqwg")
 target_server = NodePath("../../OSCServer")
-label = NodePath("../../Label")
-osc_address = "/test"
+osc_address = "/bflow/averageFlowInRegion"
 
 [node name="PineTree4" type="MeshInstance3D" parent="Jugador"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.36672, 0.00582385, -3.21488)
@@ -299,7 +354,7 @@ script = ExtResource("1_u4t6x")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0662798, 0, -1.90095)
 
 [node name="Sprite3D" type="Sprite3D" parent="Camaras/Control/SubViewportContainer2/ViewportRight/CameraRight/Node3D"]
-transform = Transform3D(0.132246, 0, 0, 0, 0.132246, 0, 0, 0, 0.132246, 0.0312319, 0, 0)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.0312319, 0, 0)
 layers = 4
 texture = ExtResource("8_8rh3s")
 
@@ -310,6 +365,9 @@ transform = Transform3D(-0.00995397, 0.00238447, -0.00558611, -0.00120279, 0.009
 libraries = {
 "": SubResource("AnimationLibrary_j8fsv")
 }
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Camaras/Control/SubViewportContainer2/ViewportRight/CameraRight/garras_ter"]
+stream = ExtResource("9_ufxkc")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="Camaras/Control"]
 layout_direction = 2
@@ -341,7 +399,7 @@ script = ExtResource("1_u4t6x")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.381705, 0, -1.895)
 
 [node name="Sprite3D" type="Sprite3D" parent="Camaras/Control/SubViewportContainer/ViewportLeft/CameraLeft/Node3D"]
-transform = Transform3D(0.125542, 0, 0, 0, 0.125542, 0, 0, 0, 0.125542, 0.0417795, 0, 0)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.0417795, 0, 0)
 layers = 2
 texture = ExtResource("8_8rh3s")
 
@@ -352,6 +410,9 @@ transform = Transform3D(-0.0102279, -0.00359572, 0.00490977, 1.80691e-05, 0.0095
 libraries = {
 "": SubResource("AnimationLibrary_x8y0u")
 }
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Camaras/Control/SubViewportContainer/ViewportLeft/CameraLeft/garras_ter"]
+stream = ExtResource("10_xtxae")
 
 [node name="Label" type="Label" parent="Camaras/Control/SubViewportContainer/ViewportLeft"]
 offset_right = 40.0
@@ -436,7 +497,11 @@ transform = Transform3D(-0.274245, 0, 1.06604, 0, 1.85213, 0, -0.251784, 0, -1.1
 mesh = ExtResource("14_ah2tv")
 
 [node name="PineTree8" type="MeshInstance3D" parent="Entorno"]
-transform = Transform3D(-0.274245, 0, 1.06604, 0, 1.85213, 0, -0.251784, 0, -1.16114, -1.84351, -0.208985, -16.0108)
+transform = Transform3D(-0.0662966, 0, 0.257669, 0, 0.448, 0, -0.0608668, 0, -0.280655, -1.84351, -0.487642, -16.0108)
+mesh = ExtResource("14_ah2tv")
+
+[node name="PineTree9" type="MeshInstance3D" parent="Entorno"]
+transform = Transform3D(0.0138836, 0, 0.376439, 0, 0.448, 0, -0.0889227, 0, 0.0587738, 2.20454, -0.487642, -16.0108)
 mesh = ExtResource("14_ah2tv")
 
 [node name="PineTree7" type="MeshInstance3D" parent="Entorno"]
@@ -446,6 +511,15 @@ mesh = ExtResource("14_ah2tv")
 [node name="Plant3" type="MeshInstance3D" parent="Entorno"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.31385, -0.156087, -2.99113)
 mesh = ExtResource("15_pvw6x")
+
+[node name="HelechoPrehistorico" parent="Entorno" instance=ExtResource("17_r06vs")]
+transform = Transform3D(0.999, 0, 0, 0, 0.999, 0, 0, 0, 0.994, -1.10938, -0.142085, -3.84967)
+
+[node name="HelechoPrehistorico2" parent="Entorno" instance=ExtResource("17_r06vs")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 1.99, 0.0994035, -0.275423, -5.20303)
+
+[node name="HelechoPrehistorico3" parent="Entorno" instance=ExtResource("17_r06vs")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 2.985, 3.96132, 0.0400326, -5.20303)
 
 [node name="Sprite3D2" type="Sprite3D" parent="."]
 transform = Transform3D(0.848953, 0, 5.43184, 0, 5.49779, 0, -5.43184, 0, 0.848953, -4.56168, 9.14104, -11.1819)
@@ -466,20 +540,35 @@ offset_left = 252.0
 offset_top = 89.0
 offset_right = 292.0
 offset_bottom = 112.0
-theme_override_font_sizes/font_size = 70
-text = "0
-"
+theme_override_font_sizes/font_size = 40
+text = "Puntos: 0
+Vidas: 3"
 
 [node name="SpawnFrutas1" parent="." instance=ExtResource("3_euj02")]
 transform = Transform3D(-4.37114e-08, -0.996195, 0.0871558, 0, 0.0871558, 0.996195, -1, 4.35451e-08, -3.8097e-09, -1.05159, 1.16087, -1.81002)
 direccion = [1, 5, 0]
+tiempo_inicio = 2.3
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="SpawnFrutas1"]
+stream = ExtResource("22_g8636")
+volume_db = -10.0
+max_db = 1.0
 
 [node name="SpawnFrutas2" parent="." instance=ExtResource("3_euj02")]
 transform = Transform3D(-1, -8.70901e-08, -7.6194e-09, 0, 0.0871558, -0.996195, 8.74228e-08, -0.996195, -0.0871558, 1.61649, 1.17044, -2.06627)
 direccion = [-1, 5, 0]
+tiempo_inicio = 1.5
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="SpawnFrutas2"]
+stream = ExtResource("23_7156g")
+volume_db = -10.0
+max_db = 1.0
 
 [node name="VolcanDecoBG" parent="." instance=ExtResource("19_7sm1g")]
 transform = Transform3D(4.07254, -1.92606, 1.15128, 2.24388, 3.50869, -2.06757, -0.0123127, 2.36646, 4.00255, 12.3676, 1.83866, -12.7397)
+
+[node name="VolcanDecoBG3" parent="." instance=ExtResource("19_7sm1g")]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 0.131998, 0.395424, -17.4042)
 
 [node name="VolcanDecoBG2" parent="." instance=ExtResource("19_7sm1g")]
 transform = Transform3D(1.51823, -0.358498, -2.98967, -2.85326, -1.24103, -1.30015, -0.962035, 3.11496, -0.862068, -16.0096, 1.19984, -13.8671)
@@ -487,4 +576,28 @@ transform = Transform3D(1.51823, -0.358498, -2.98967, -2.85326, -1.24103, -1.300
 [node name="HongoDeco" parent="." instance=ExtResource("20_1leal")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.76268, -0.108135, -2.93545)
 
+[node name="HongoVerde" parent="." instance=ExtResource("21_ni3kd")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 1.01401, -0.0109469, -2.55999)
+
+[node name="HongoVerde2" parent="." instance=ExtResource("21_ni3kd")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, -4.89384, -0.0109469, -2.55999)
+
+[node name="Sprite3D4" type="Sprite3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.56461, 2.96273, -15.7464)
+texture = ExtResource("19_expqq")
+
+[node name="Inicio" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00825357, 1.0666, -1.54877)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 60.0
+one_shot = true
+
+[node name="SonidoInicio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("28_i5ggf")
+
+[node name="SonidoFin" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("28_ak3dr")
+
 [connection signal="body_entered" from="Piso2" to="Camaras" method="_on_area_3d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

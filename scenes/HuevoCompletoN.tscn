@@ -71,8 +71,8 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_vbxd2")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8qhnj"]
-radius = 0.391234
-height = 1.2063
+radius = 0.704552
+height = 1.9671
 
 [node name="HuevoCompleto" type="RigidBody3D"]
 collision_mask = 2
@@ -82,7 +82,7 @@ puntos = 0
 cortada = "huevo"
 
 [node name="MeshHuevoCompleto" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.11, 0, 0, 0, 0.11, 0, 0, 0, 0.11, 0, 0, 0)
+transform = Transform3D(0.178178, 0, 0, 0, 0.178178, 0, 0, 0, 0.178178, 0, 0, 0)
 mesh = SubResource("ArrayMesh_0xi4d")
 skeleton = NodePath("")
 

@@ -7,17 +7,31 @@ var fruta_dragon_cortada = preload("res://scenes/fruta_dragon_cortada.tscn")
 var limon_cortado = preload("res://scenes/limon_cortado.tscn")
 var manzana_cortada = preload("res://scenes/manzana_cortada.tscn")
 var huevo_cortado = preload("res://scenes/HuevoCortadoN.tscn")
-#var bananacut_scene = preload("res://scenes/banana_cortada.tscn")
+var fruta_inicio_cortada = preload("res://scenes/sandia_cortada.tscn")
 
+var banana = preload("res://scenes/frutas_completas/banana_inicio.tscn")
+
+var fruta_inicio = null
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Jugador/OSCReceiver.label = $Label
+	_inicio()
 	if $Ambiente.playing:
 		$Ambiente.stop()
 	$Ambiente.play()
 
-	#if body is RigidBody3D:
-		#GLOBAL.entered_body = body  # Almacena la referencia del cuerpo que entró
+func _inicio():
+	fruta_inicio = banana.instantiate()
+	fruta_inicio.global_position = $Inicio.global_position
+	$Inicio.add_child(fruta_inicio)
+
+func _comenzar():
+	$SpawnFrutas1.empezar()
+	$SpawnFrutas2.empezar()
+	GLOBAL.vidas = 3
+	$Timer.start()
+	$SonidoInicio.play()
+
+
 func cortar_el_banano(body: RigidBody3D) -> void:
 	# Instancia el fruto
 	if not GLOBAL.entered_body == null:
@@ -39,8 +53,12 @@ func cortar_el_banano(body: RigidBody3D) -> void:
 				banana_instance = manzana_cortada.instantiate()
 			"huevo":
 				banana_instance = huevo_cortado.instantiate()
-				GLOBAL.vidas -= 1
-		aumentar_puntos()
+				_restar_vidas()
+			"fruta_inicio":
+				banana_instance = fruta_inicio_cortada.instantiate()
+				_comenzar()
+		aumentar_puntos(body.puntos)
+
 		# Reemplaza a la banana entera por la cortada en la misma posición y rotación
 		# Añade la banana cortada a la misma jerarquía de nodos que la banana completa
 		body.get_parent().add_child(banana_instance)
@@ -68,6 +86,27 @@ func _input(event):
 			$Camaras/Control/SubViewportContainer/ViewportLeft/CameraLeft/garras_ter/AnimationPlayer.play("corte_izq")
 		cortar_el_banano(GLOBAL.entered_body)
 
-func aumentar_puntos():
-	GLOBAL.puntos += 1
-	$Label.text = str(GLOBAL.puntos)
+func aumentar_puntos(cant: int = 0):
+	GLOBAL.puntos += cant
+	_actualizar_label()
+
+func _actualizar_label():
+	$Label.text = "Puntos: " + str(GLOBAL.puntos) + "\nVidas: " + str(GLOBAL.vidas)
+
+func _restar_vidas():
+	GLOBAL.vidas -= 1
+	if GLOBAL.vidas == 0:
+		_parar()
+	else:
+		_actualizar_label()
+
+func _parar():
+	$SonidoFin.play()
+	GLOBAL.puntos = 0
+	_inicio()
+	$Timer.stop()
+	$SpawnFrutas2.parar()
+	$SpawnFrutas1.parar()
+
+func _on_timer_timeout():
+	_parar()

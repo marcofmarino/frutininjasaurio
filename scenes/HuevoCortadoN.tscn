@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=4 uid="uid://b7is2rjebd7jb"]
+[gd_scene load_steps=15 format=4 uid="uid://b7is2rjebd7jb"]
 
 [ext_resource type="Script" path="res://assets/scripts/parte_fruta.gd" id="1_iuhao"]
+[ext_resource type="AudioStream" uid="uid://bliv0jab7fyqu" path="res://assets/sound_fx/crackingegg_1.mp3" id="2_aipa8"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_y21ml"]
 
@@ -198,7 +199,7 @@ physics_material_override = SubResource("PhysicsMaterial_y21ml")
 script = ExtResource("1_iuhao")
 
 [node name="MeshHuevoIzq" type="MeshInstance3D" parent="HuevoCortadoIzq"]
-transform = Transform3D(0.11, 0, 0, 0, 0.11, 0, 0, 0, 0.11, 0, 0, 0)
+transform = Transform3D(0.17, 0, 0, 0, 0.17, 0, 0, 0, 0.17, 0, 0, 0)
 mesh = SubResource("ArrayMesh_mrktd")
 skeleton = NodePath("")
 
@@ -214,13 +215,17 @@ physics_material_override = SubResource("PhysicsMaterial_fd6lg")
 script = ExtResource("1_iuhao")
 
 [node name="MeshHuevoDer" type="MeshInstance3D" parent="HuevoCortadoDer"]
-transform = Transform3D(0.11, 0, 0, 0, 0.11, 0, 0, 0, 0.11, 0, 0, 0)
+transform = Transform3D(0.17, 0, 0, 0, 0.17, 0, 0, 0, 0.17, 0, 0, 0)
 mesh = SubResource("ArrayMesh_inbq7")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HuevoCortadoDer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0577218, -0.0273136)
 shape = SubResource("SphereShape3D_50ih4")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_aipa8")
+autoplay = true
 
 [connection signal="body_entered" from="HuevoCortadoIzq" to="HuevoCortadoIzq" method="_on_body_entered"]
 [connection signal="body_entered" from="HuevoCortadoDer" to="HuevoCortadoDer" method="_on_body_entered"]

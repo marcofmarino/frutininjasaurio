@@ -15,32 +15,9 @@ extends Node
 @onready var parent = get_parent()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-# OSC messages are stored as a dictionary held in OSCServer variable incoming_messages, which uses a string for the
-# key and an array to store the data. To access the data use the following format: 
-# target_server.incoming_messages[osc_address][0]
-#func _process(delta):
-	#
-	## IMPORTANT! You must check if the server has received a message on the correct address. The example below
-	## checks if the server has received an OSC message at the address "/example" and then prints the first value
-	## sent with the message.
-	#if target_server.incoming_messages.has(osc_address):
-		#print(target_server.incoming_messages[osc_address])
-##
-##		# This example changes the scale of a Node2D
-##
-##		#parent.scale = Vector2(1,1) * target_server.incoming_messages[osc_address][0]
-##
-##		# This example changes the scale of a Node3D
-##
-##		#parent.scale = Vector3(1,1,1) * target_server.incoming_messages[osc_address][0]
-##
-##
-	#pass
 func _physics_process(delta):
 	if target_server.incoming_messages.has(osc_address):
 		if  target_server.incoming_messages[osc_address].size() > 0:
-			if target_server.incoming_messages[osc_address][0] < -0.7 or target_server.incoming_messages[osc_address][0] > 0.7:
+			if (target_server.incoming_messages[osc_address][1] < -0.7 or target_server.incoming_messages[osc_address][1] > 0.7) or (target_server.incoming_messages[osc_address][2] < -0.7 or target_server.incoming_messages[osc_address][2] > 0.7):
 				get_parent().get_parent().cortar_el_banano(GLOBAL.entered_body)
-
 		target_server.incoming_messages.clear()
