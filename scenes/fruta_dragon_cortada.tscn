@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=4 uid="uid://bi4b5oriuinwy"]
+[gd_scene load_steps=15 format=4 uid="uid://bi4b5oriuinwy"]
 
 [ext_resource type="Script" path="res://assets/scripts/parte_fruta.gd" id="1_elkym"]
+[ext_resource type="AudioStream" uid="uid://fx1nvn8g520p" path="res://assets/sound_fx/slash_3.mp3" id="2_0gdv0"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_a7amk"]
 
@@ -217,6 +218,10 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FrutaDragonCortada2"]
 shape = SubResource("SphereShape3D_bgh4l")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_0gdv0")
+autoplay = true
 
 [connection signal="body_entered" from="FrutaDragonCortada1" to="FrutaDragonCortada1" method="_on_body_entered"]
 [connection signal="body_entered" from="FrutaDragonCortada2" to="FrutaDragonCortada2" method="_on_body_entered"]

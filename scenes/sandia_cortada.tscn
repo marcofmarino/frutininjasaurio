@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=4 uid="uid://cs7l2x5nlj7x"]
+[gd_scene load_steps=15 format=4 uid="uid://cs7l2x5nlj7x"]
 
 [ext_resource type="Script" path="res://assets/scripts/parte_fruta.gd" id="1_lw550"]
+[ext_resource type="AudioStream" uid="uid://fx1nvn8g520p" path="res://assets/sound_fx/slash_3.mp3" id="2_4s1tt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6sm7f"]
 resource_name = "Material"
@@ -271,6 +272,10 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SandiaCortada2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.338968, 0, 0)
 shape = SubResource("SphereShape3D_kkvhk")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_4s1tt")
+autoplay = true
 
 [connection signal="body_entered" from="SandiaCortada1" to="SandiaCortada1" method="_on_body_entered"]
 [connection signal="body_entered" from="SandiaCortada2" to="SandiaCortada1" method="_on_sandia_cortada_2_body_entered"]

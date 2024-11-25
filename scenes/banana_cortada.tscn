@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=4 uid="uid://068ptcurp3h"]
+[gd_scene load_steps=14 format=4 uid="uid://068ptcurp3h"]
 
 [ext_resource type="Script" path="res://assets/scripts/banana_cortada.gd" id="1_isk63"]
 [ext_resource type="Script" path="res://assets/scripts/parte_fruta.gd" id="2_rfpwe"]
+[ext_resource type="AudioStream" uid="uid://fx1nvn8g520p" path="res://assets/sound_fx/slash_3.mp3" id="3_atk6h"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g71n2"]
 bounce = 0.2
@@ -218,6 +219,10 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BananaIncompleta1"]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, -0.347209, 0.222089)
 shape = SubResource("SphereShape3D_u20v2")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_atk6h")
+autoplay = true
 
 [connection signal="body_entered" from="BananaIncompleta" to="BananaIncompleta" method="_on_body_entered"]
 [connection signal="body_entered" from="BananaIncompleta1" to="BananaIncompleta1" method="_on_body_entered"]

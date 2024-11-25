@@ -75,12 +75,13 @@ radius = 0.299742
 
 [node name="FrutaDragon" type="RigidBody3D"]
 collision_mask = 2
+mass = 1.3
 physics_material_override = SubResource("PhysicsMaterial_eycbc")
 script = ExtResource("1_67n76")
 puntos = 2
 cortada = "dragon"
 
-[node name="FrutaDragon" type="MeshInstance3D" parent="."]
+[node name="Cube" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 mesh = SubResource("ArrayMesh_47b5n")
 skeleton = NodePath("")

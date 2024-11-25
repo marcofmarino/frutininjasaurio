@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://dxql1afxjxtjb"]
+[gd_scene load_steps=44 format=3 uid="uid://dxql1afxjxtjb"]
 
 [ext_resource type="Script" path="res://assets/scripts/camera_right.gd" id="1_u4t6x"]
 [ext_resource type="Script" path="res://assets/scripts/mundo.gd" id="1_xmh0s"]
@@ -68,18 +68,6 @@ tracks/2/keys = {
 "update": 0,
 "values": [Vector3(0.0116607, 0.0116607, 0.0116607)]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("AudioStreamPlayer3D:playing")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
 
 [sub_resource type="Animation" id="Animation_x16hs"]
 resource_name = "corte_der"
@@ -119,18 +107,6 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Vector3(0.0116607, 0.0116607, 0.0116607), Vector3(0.077, 0.077, 0.077), Vector3(0.077, 0.077, 0.077), Vector3(0.0116607, 0.0116607, 0.0116607)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("AudioStreamPlayer3D:playing")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.166667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j8fsv"]
@@ -177,18 +153,6 @@ tracks/2/keys = {
 "update": 0,
 "values": [Vector3(0.0119015, 0.0119015, 0.0119015)]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("AudioStreamPlayer3D:playing")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
 
 [sub_resource type="Animation" id="Animation_m3gr6"]
 resource_name = "corte_izq"
@@ -229,24 +193,16 @@ tracks/2/keys = {
 "update": 0,
 "values": [Vector3(0.0119015, 0.0119015, 0.0119015), Vector3(0.077, 0.077, 0.077), Vector3(0.0119015, 0.0119015, 0.0119015)]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("AudioStreamPlayer3D:playing")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.233333),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_x8y0u"]
 _data = {
 "RESET": SubResource("Animation_ayydp"),
 "corte_izq": SubResource("Animation_m3gr6")
 }
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rbrml"]
+radius = 0.253766
+height = 12.0971
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c18vt"]
 albedo_color = Color(0.0124506, 0.0955881, 0.061499, 1)
@@ -420,11 +376,21 @@ offset_bottom = 23.0
 
 [node name="RayRight" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0.02, 1.79, 1.052)
+visible = false
 target_position = Vector3(0, 0, -20)
 debug_shape_thickness = 3
 
+[node name="Apuntado" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02, 1.79, 1.052)
+collision_layer = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Apuntado"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_rbrml")
+
 [node name="RayLeft" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.02, 1.79, 1.052)
+visible = false
 target_position = Vector3(0, 0, -20)
 debug_shape_thickness = 4
 
@@ -545,7 +511,7 @@ text = "Puntos: 0
 Vidas: 3"
 
 [node name="SpawnFrutas1" parent="." instance=ExtResource("3_euj02")]
-transform = Transform3D(-4.37114e-08, -0.996195, 0.0871558, 0, 0.0871558, 0.996195, -1, 4.35451e-08, -3.8097e-09, -1.05159, 1.16087, -1.81002)
+transform = Transform3D(-4.37114e-08, -0.996195, 0.0871558, 0, 0.0871558, 0.996195, -1, 4.35451e-08, -3.8097e-09, -0.915022, 1.16087, -1.81002)
 direccion = [1, 5, 0]
 tiempo_inicio = 2.3
 
@@ -599,5 +565,12 @@ stream = ExtResource("28_i5ggf")
 [node name="SonidoFin" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("28_ak3dr")
 
+[node name="TimerDelay" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="body_entered" from="Apuntado" to="." method="_on_fruta"]
+[connection signal="body_exited" from="Apuntado" to="." method="_on_fruta_salio"]
 [connection signal="body_entered" from="Piso2" to="Camaras" method="_on_area_3d_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="TimerDelay" to="." method="_on_timer_delay_timeout"]

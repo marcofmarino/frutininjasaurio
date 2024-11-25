@@ -47,12 +47,13 @@ radius = 0.204802
 
 [node name="LimonCompleto" type="RigidBody3D"]
 collision_mask = 2
+mass = 1.2
 physics_material_override = SubResource("PhysicsMaterial_i3sru")
 script = ExtResource("1_an7y8")
 puntos = 4
 cortada = "limon"
 
-[node name="LimonCompleto" type="MeshInstance3D" parent="."]
+[node name="Cube" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
 mesh = SubResource("ArrayMesh_kwfds")
 skeleton = NodePath("")

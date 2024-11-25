@@ -76,12 +76,13 @@ height = 1.9671
 
 [node name="HuevoCompleto" type="RigidBody3D"]
 collision_mask = 2
+mass = 1.3
 physics_material_override = SubResource("PhysicsMaterial_jxm3c")
 script = ExtResource("1_4fafa")
 puntos = 0
 cortada = "huevo"
 
-[node name="MeshHuevoCompleto" type="MeshInstance3D" parent="."]
+[node name="Cube" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.178178, 0, 0, 0, 0.178178, 0, 0, 0, 0.178178, 0, 0, 0)
 mesh = SubResource("ArrayMesh_0xi4d")
 skeleton = NodePath("")

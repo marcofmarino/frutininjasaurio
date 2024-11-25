@@ -4,9 +4,6 @@
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_m858w"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_0rj7s"]
-radius = 0.448168
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yy4q0"]
 resource_name = "Material"
 cull_mode = 2
@@ -73,17 +70,20 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_rgbh7")
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_0rj7s"]
+radius = 0.371067
+
 [node name="BananaCompleta" type="RigidBody3D"]
 collision_mask = 2
 physics_material_override = SubResource("PhysicsMaterial_m858w")
 gravity_scale = 0.0
 script = ExtResource("1_xqdvr")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(2.53686, 0, 0, 0, 2.53686, 0, 0, 0, 2.53686, 0.178325, -0.486733, -0.145292)
-shape = SubResource("SphereShape3D_0rj7s")
-
 [node name="Cube" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.503379, 0, 0, 0, 0.503379, 0, 0, 0, 0.503379, 0.117758, -0.355872, -0.195464)
+transform = Transform3D(0.503379, 0, 0, 0, 0.503379, 0, 0, 0, 0.503379, 0, 0, 0)
 mesh = SubResource("ArrayMesh_t4y4n")
 skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(2.53686, 0, 0, 0, 2.53686, 0, 0, 0, 2.53686, 0, 0, 0)
+shape = SubResource("SphereShape3D_0rj7s")

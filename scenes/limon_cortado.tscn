@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=4 uid="uid://rxfqheiwqoid"]
+[gd_scene load_steps=16 format=4 uid="uid://rxfqheiwqoid"]
 
 [ext_resource type="Script" path="res://assets/scripts/parte_fruta.gd" id="1_i4r25"]
+[ext_resource type="AudioStream" uid="uid://dj7kwkoiksoc0" path="res://assets/sound_fx/slash_1.mp3" id="2_vypbd"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gx0un"]
 
@@ -222,6 +223,10 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="LimonCortado2"]
 shape = SubResource("SphereShape3D_x3sd0")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_vypbd")
+autoplay = true
 
 [connection signal="body_entered" from="LimonCortado1" to="LimonCortado1" method="_on_body_entered"]
 [connection signal="body_entered" from="LimonCortado2" to="LimonCortado2" method="_on_body_entered"]

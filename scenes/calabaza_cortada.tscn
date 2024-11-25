@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=4 uid="uid://d0wf18yxphuqd"]
+[gd_scene load_steps=15 format=4 uid="uid://d0wf18yxphuqd"]
 
 [ext_resource type="Script" path="res://assets/scripts/parte_fruta.gd" id="1_nueib"]
+[ext_resource type="AudioStream" uid="uid://dj7kwkoiksoc0" path="res://assets/sound_fx/slash_1.mp3" id="2_jlvc2"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_l1k3d"]
 
@@ -219,6 +220,10 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CalabazaCortada2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00760508, -0.0859226, 0.00491333)
 shape = SubResource("SphereShape3D_egg0n")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_jlvc2")
+autoplay = true
 
 [connection signal="body_entered" from="CalabazaCortada1" to="CalabazaCortada1" method="_on_body_entered"]
 [connection signal="body_entered" from="CalabazaCortada2" to="CalabazaCortada2" method="_on_body_entered"]

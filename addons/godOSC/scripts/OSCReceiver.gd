@@ -18,6 +18,6 @@ extends Node
 func _physics_process(delta):
 	if target_server.incoming_messages.has(osc_address):
 		if  target_server.incoming_messages[osc_address].size() > 0:
-			if (target_server.incoming_messages[osc_address][1] < -0.7 or target_server.incoming_messages[osc_address][1] > 0.7) or (target_server.incoming_messages[osc_address][2] < -0.7 or target_server.incoming_messages[osc_address][2] > 0.7):
-				get_parent().get_parent().cortar_el_banano(GLOBAL.entered_body)
+			if (target_server.incoming_messages[osc_address][1] < -0.3 or target_server.incoming_messages[osc_address][1] > 0.3) or (target_server.incoming_messages[osc_address][2] < -0.3 or target_server.incoming_messages[osc_address][2] > 0.3):
+				get_parent().get_parent().cortar()
 		target_server.incoming_messages.clear()

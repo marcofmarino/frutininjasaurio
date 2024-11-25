@@ -69,22 +69,26 @@ func cortar_el_banano(body: RigidBody3D) -> void:
 		GLOBAL.entered_body = null  # Reinicia la referencia
 
 func _physics_process(delta):
-	
-	$RayLeft.look_at($Camaras/Control/SubViewportContainer/ViewportLeft/CameraLeft/Node3D/Sprite3D.get_global_position())
-	$RayRight.look_at($Camaras/Control/SubViewportContainer2/ViewportRight/CameraRight/Node3D/Sprite3D.get_global_position())
-	if $RayLeft.is_colliding() and $RayLeft.get_collider() is RigidBody3D:
-			GLOBAL.entered_body = $RayLeft.get_collider()
-	else:
-		GLOBAL.entered_body = null
+	#
+	#$RayLeft.look_at($Camaras/Control/SubViewportContainer/ViewportLeft/CameraLeft/Node3D/Sprite3D.get_global_position())
+	#$RayRight.look_at($Camaras/Control/SubViewportContainer2/ViewportRight/CameraRight/Node3D/Sprite3D.get_global_position())
+	$Apuntado.look_at($Camaras/Control/SubViewportContainer/ViewportLeft/CameraLeft/Node3D/Sprite3D.get_global_position())
+	#if $RayLeft.is_colliding() and $RayLeft.get_collider() is RigidBody3D:
+			#GLOBAL.entered_body = $RayLeft.get_collider()
+	#else:
+		#GLOBAL.entered_body = null
 	
 
 func _input(event):
 	if Input.is_action_just_pressed("cortar"):
-		if $Camaras/Control/SubViewportContainer/ViewportLeft/CameraLeft/garras_ter/AnimationPlayer.is_playing():
-			$Camaras/Control/SubViewportContainer2/ViewportRight/CameraRight/garras_ter/AnimationPlayer.play("corte_der")
-		else:
-			$Camaras/Control/SubViewportContainer/ViewportLeft/CameraLeft/garras_ter/AnimationPlayer.play("corte_izq")
-		cortar_el_banano(GLOBAL.entered_body)
+		cortar()
+
+func cortar():
+	if $Camaras/Control/SubViewportContainer/ViewportLeft/CameraLeft/garras_ter/AnimationPlayer.is_playing():
+		$Camaras/Control/SubViewportContainer2/ViewportRight/CameraRight/garras_ter/AnimationPlayer.play("corte_der")
+	else:
+		$Camaras/Control/SubViewportContainer/ViewportLeft/CameraLeft/garras_ter/AnimationPlayer.play("corte_izq")
+	cortar_el_banano(GLOBAL.entered_body)
 
 func aumentar_puntos(cant: int = 0):
 	GLOBAL.puntos += cant
@@ -110,3 +114,24 @@ func _parar():
 
 func _on_timer_timeout():
 	_parar()
+
+
+func _on_fruta(body):
+	if body is RigidBody3D:
+		GLOBAL.ultimo_material = body.get_child(0).get_active_material(0)
+		var material = GLOBAL.ultimo_material.duplicate()
+		material.albedo_color = Color("#00ff00")
+		body.get_child(0).set_surface_override_material(0, material)
+		GLOBAL.entered_body = body
+		$TimerDelay.start()
+
+
+func _on_fruta_salio(body):
+	if body is RigidBody3D:
+		$TimerDelay.start()
+		body.get_child(0).set_surface_override_material(0, GLOBAL.ultimo_material)
+
+
+func _on_timer_delay_timeout():
+	GLOBAL.entered_body = null
+	#body.get_child(0).set_surface_override_material(0, GLOBAL.ultimo_material)

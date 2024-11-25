@@ -131,11 +131,12 @@ radius = 0.209724
 
 [node name="ManzanaCompleta" type="RigidBody3D"]
 collision_mask = 2
+mass = 1.2
 physics_material_override = SubResource("PhysicsMaterial_rsx1y")
 script = ExtResource("1_i7iww")
 cortada = "manzana"
 
-[node name="Manzana" type="MeshInstance3D" parent="."]
+[node name="Cube" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.09, 0, 0, 0, 0.09, 0, 0, 0, 0.09, 0, 0, 0)
 mesh = SubResource("ArrayMesh_x0g46")
 skeleton = NodePath("")

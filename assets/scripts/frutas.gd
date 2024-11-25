@@ -10,6 +10,7 @@ func _ready():
 	contact_monitor = true
 	max_contacts_reported = 2
 	rotation = get_parent().rotation
+	
 	randomize()
 	#apply_impulse(Vector3(rotation.y, 5, 0).normalized()* 8, Vector3(0, 0, 0))
 	apply_impulse(Vector3(direccion[0], direccion[1], direccion[2]).normalized()* 8, Vector3(randf_range(0.0, 0.5), randf_range(0.0, 0.5), randf_range(0.0, 0.5)))
